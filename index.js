@@ -9,7 +9,11 @@ const weather = require('./weather');
 
 app.use(express.json());
 
-const whiteList = ['http://127.0.0.1', 'http://127.0.0.1:5500'];
+const whiteList = [
+  'http://127.0.0.1',
+  'http://127.0.0.1:5500',
+  'https://weather-app-server-oboi1zvv9-seficohen1.vercel.app/',
+];
 const corsOptions = {
   origin: (origin, callback) => {
     if (!origin || whiteList.indexOf(origin) !== -1) {
